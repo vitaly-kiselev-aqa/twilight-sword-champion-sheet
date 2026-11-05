@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Start HTTP Server",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "--yes",
+        "http-server@14.1.1",
+        "-c-1",
+        "-p",
+        "5501",
+        "-a",
+        "127.0.0.1"
+      ],
+      "port": 5501
+    }
+  ]
+}
