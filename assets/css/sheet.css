@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    'identity'
+    'champion'
     'attributes'
     'equipment'
     'inventory'
@@ -17,13 +17,13 @@
   .sheet {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-areas:
-      'identity attributes traits'
+      'champion attributes traits'
       'equipment inventory traits';
   }
 }
 
-.sheet__identity {
-  grid-area: identity;
+.sheet__champion {
+  grid-area: champion;
 }
 
 .sheet__attributes {
