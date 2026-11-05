@@ -1,0 +1,26 @@
+.card {
+  position: relative;
+  padding: var(--card-padding);
+  background-color: var(--color-card);
+  border: var(--card-border-width) solid var(--color-brown);
+  border-radius: var(--card-radius);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: var(--card-inner-frame-offset);
+  border: 1px solid var(--color-brown-light);
+  border-radius: calc(var(--card-radius) - 2px);
+  pointer-events: none;
+}
+
+.card__title {
+  margin: 0 0 1rem;
+  color: var(--color-teal);
+  font-size: 1.75rem;
+  font-variant: small-caps;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
