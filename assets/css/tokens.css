@@ -1,0 +1,19 @@
+:root {
+  --color-teal: #12817f;
+  --color-page: #f3e6d2;
+  --color-card: #fdf8ef;
+  --color-brown: #8a6a43;
+  --color-brown-light: #c9ad86;
+  --color-ink: #3b2c1c;
+
+  --font-serif: Georgia, 'Times New Roman', serif;
+
+  --sheet-max-width: 1280px;
+  --sheet-padding: 1rem;
+  --sheet-gap: 1rem;
+
+  --card-border-width: 3px;
+  --card-radius: 6px;
+  --card-padding: 1.25rem;
+  --card-inner-frame-offset: 5px;
+}

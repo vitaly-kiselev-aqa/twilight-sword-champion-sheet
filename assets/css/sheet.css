@@ -1,0 +1,43 @@
+.sheet {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'identity'
+    'attributes'
+    'equipment'
+    'inventory'
+    'traits';
+  gap: var(--sheet-gap);
+  max-width: var(--sheet-max-width);
+  margin: 0 auto;
+  padding: var(--sheet-padding);
+}
+
+@media (min-width: 960px) {
+  .sheet {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      'identity attributes traits'
+      'equipment inventory traits';
+  }
+}
+
+.sheet__identity {
+  grid-area: identity;
+}
+
+.sheet__attributes {
+  grid-area: attributes;
+}
+
+.sheet__equipment {
+  grid-area: equipment;
+}
+
+.sheet__inventory {
+  grid-area: inventory;
+}
+
+.sheet__traits {
+  grid-area: traits;
+}
