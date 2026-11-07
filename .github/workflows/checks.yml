@@ -1,0 +1,18 @@
+name: 🧪 Checks
+
+on:
+  pull_request:
+
+jobs:
+  checks:
+    name: TypeScript & Prettier checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Prettier
+        run: npx --yes prettier@3.9.10 --check .
+      - name: TypeScript
+        run: npx --yes -p typescript@5 tsc -p jsconfig.json
