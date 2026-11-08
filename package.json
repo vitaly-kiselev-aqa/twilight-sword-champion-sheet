@@ -1,0 +1,22 @@
+{
+  "name": "twilight-sword-champion-sheet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prettier:check": "prettier --check .",
+    "test": "npm run prettier:check && npm run typecheck && npm run typecheck:tests && npm run test:unit",
+    "test:unit": "vitest run",
+    "typecheck": "tsc -p jsconfig.json",
+    "typecheck:tests": "tsc -p tests/jsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "jsdom": "29.1.1",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3",
+    "vitest": "5.1.0"
+  },
+  "engines": {
+    "node": "22.22.0"
+  }
+}
