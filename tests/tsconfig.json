@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "checkJs": true,
+    "allowJs": true,
+    "allowImportingTsExtensions": true,
     "strict": true,
     "noEmit": true,
     "target": "ES2022",
@@ -11,5 +12,5 @@
     "maxNodeModuleJsDepth": 0,
     "skipLibCheck": true
   },
-  "include": ["**/*.js", "../assets/js/**/*.js"]
+  "include": ["**/*.ts", "../assets/js/**/*.js"]
 }

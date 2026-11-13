@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { loadScript } from './helpers/load-script.js';
+import { loadScript } from './helpers/load-script.ts';
 
 describe('sheet.readSheetData', () => {
   it('reads raw values from page fields', () => {
