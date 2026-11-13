@@ -8,6 +8,7 @@ type SheetScripts = {
   storage: typeof storage;
   fields: typeof fields;
   sheet: typeof sheet;
+  app: typeof app;
 };
 
 type ScriptName = keyof SheetScripts;
