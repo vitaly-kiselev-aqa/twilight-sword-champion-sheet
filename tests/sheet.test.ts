@@ -3,7 +3,10 @@ import { loadScript } from './helpers/load-script.ts';
 
 describe('sheet.readSheetData', () => {
   it('reads raw values from page fields', () => {
-    const fields = { getRawValues: vi.fn(() => new Map()) };
+    const fields = {
+      getRawValues: vi.fn(() => new Map()),
+      setRawValues: vi.fn(),
+    };
     const sheet = loadScript('sheet', { fields });
 
     sheet.readSheetData();
@@ -12,7 +15,7 @@ describe('sheet.readSheetData', () => {
   });
 
   it('returns sheet data with a title', () => {
-    const fields = { getRawValues: () => new Map() };
+    const fields = { getRawValues: () => new Map(), setRawValues: () => {} };
     const sheet = loadScript('sheet', { fields });
 
     expect(sheet.readSheetData()).toEqual({
