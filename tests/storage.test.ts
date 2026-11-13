@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { loadScript } from './helpers/load-script.js';
+import { loadScript } from './helpers/load-script.ts';
 
 const STORAGE_KEY = 'twilight-sword-champion-sheet';
 

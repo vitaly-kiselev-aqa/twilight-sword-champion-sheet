@@ -3,21 +3,19 @@ import { resolve } from 'node:path';
 
 const SCRIPTS_DIR = resolve(import.meta.dirname, '../../assets/js');
 
-/**
- * @typedef {Object} SheetScripts
- * @property {typeof model} model
- * @property {typeof storage} storage
- * @property {typeof fields} fields
- * @property {typeof sheet} sheet
- */
+type SheetScripts = {
+  model: typeof model;
+  storage: typeof storage;
+  fields: typeof fields;
+  sheet: typeof sheet;
+};
 
-/**
- * @template {keyof SheetScripts} ScriptName
- * @param {ScriptName} scriptName
- * @param {Partial<SheetScripts>} [args]
- * @returns {SheetScripts[ScriptName]}
- */
-export function loadScript(scriptName, args = {}) {
+type ScriptName = keyof SheetScripts;
+
+export function loadScript<T extends ScriptName>(
+  scriptName: T,
+  args: Partial<SheetScripts> = {},
+): SheetScripts[T] {
   const scriptPath = resolve(SCRIPTS_DIR, `${scriptName}.js`);
   const scriptSource = readFileSync(scriptPath, 'utf8');
 

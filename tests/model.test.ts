@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { loadScript } from './helpers/load-script.js';
+import { loadScript } from './helpers/load-script.ts';
 
 const model = loadScript('model');
 
