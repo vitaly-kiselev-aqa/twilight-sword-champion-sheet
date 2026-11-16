@@ -1,7 +1,11 @@
 import { test, expect } from '@playwright/test';
+import { ChampionSheetPage } from './page-objects/champion-sheet-page.ts';
 
 test('has title', async ({ page }) => {
-  await page.goto('/');
+  const championSheet = new ChampionSheetPage(page);
+  await championSheet.goto();
 
-  await expect(page).toHaveTitle('Лист Чемпиона — Twilight Sword');
+  await expect(championSheet.page).toHaveTitle(
+    'Лист Чемпиона — Twilight Sword',
+  );
 });
