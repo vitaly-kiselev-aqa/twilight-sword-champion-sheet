@@ -1,19 +1,12 @@
-import { test, expect } from '@playwright/test';
-import { ChampionSheetPage } from './page-objects/champion-sheet-page.ts';
+import { expect, test } from './fixtures.ts';
 
-test('has title', async ({ page }) => {
-  const championSheet = new ChampionSheetPage(page);
-  await championSheet.goto();
-
+test('has title', async ({ championSheet }) => {
   await expect(championSheet.page).toHaveTitle(
     'Лист Чемпиона — Twilight Sword',
   );
 });
 
-test('has sections', async ({ page }) => {
-  const championSheet = new ChampionSheetPage(page);
-  await championSheet.goto();
-
+test('has sections', async ({ championSheet }) => {
   const {
     championSection,
     attributeSection,
